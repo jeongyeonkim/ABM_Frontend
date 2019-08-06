@@ -6,7 +6,7 @@
       <v-layout align-center justify-center>
         <p class="text-md-center">LOGO</p>
       </v-layout>
-      <v-layout class = "mx-5 my-10">
+      <v-layout class = "mx-5 my-10" align-center justify-center>
         <v-flex xs12 sm6>
           <v-text><v-icon>account_box</v-icon>    회원가입</v-text>
 
@@ -17,7 +17,6 @@
           <v-text-field type="password" v-model="password" label="비밀번호" clearable></v-text-field>
           <v-text-field type="password" v-model="password_check" label="비밀번호 확인" clearable></v-text-field>
           <v-text-field v-model="name" label="이름" clearable></v-text-field>
-          
           <v-flex row>
           <v-text-field class="mx-2" v-model="pet_num" label="반려동물 등록번호" clearable></v-text-field>
           <v-btn>중복확인</v-btn> </v-flex>
