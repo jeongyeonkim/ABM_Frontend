@@ -6,8 +6,8 @@
       <v-layout align-center justify-center>
         <p class="text-md-center">LOGO</p>
       </v-layout>
-      <v-layout class = "mx-5 my-10" align-center justify-center>
-        <v-flex xs12 sm6>
+      <v-layout class = "mx-10 my-10" align-center justify-center>
+        <v-flex xs12 sm8 md4>
           <v-text><v-icon>account_box</v-icon>    회원가입</v-text>
 
           <v-flex row>
@@ -24,7 +24,7 @@
           <v-text-field v-model="nickname" label="닉네임" clearable></v-text-field>
           <v-select :items="items" label="통신사"></v-select>
           <v-text-field v-model="phone_num" label="핸드폰 번호" clearable></v-text-field>
-          <v-btn block outlined color="dark">가입하기</v-btn>
+          <v-btn block outlined color="#E65100" class="my-4" href="/">가입하기</v-btn>
         </v-flex>
       </v-layout>
     </v-container>

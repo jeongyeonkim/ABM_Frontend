@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'signin',
+      component: () => import('./views/Signin.vue')
     },
     {
       path: '/signup',
@@ -17,9 +18,14 @@ export default new Router({
       component: () => import('./views/Signup.vue')
     },
     {
-      path: '/signin',
-      name: 'signin',
-      component: () => import('./views/Signin.vue')
+      path: '/main',
+      name: 'main',
+      component: () => import('./views/Main.vue')
+    },
+    {
+      path: '/writeperson',
+      name: 'writeperson',
+      component: () => import('./views/WritePerson.vue')
     }
   ]
 })
