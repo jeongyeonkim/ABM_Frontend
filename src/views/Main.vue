@@ -12,10 +12,12 @@
             <v-tab href="#tab-1">
               인기 게시물
               <v-icon>favorite</v-icon>
+
             </v-tab>
 
             <v-tab href="#tab-2">
               최근 게시물
+              
               <v-icon>history</v-icon>
             </v-tab>
             <v-btn icon href="/writeperson">
