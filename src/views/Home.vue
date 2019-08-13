@@ -1,5 +1,6 @@
 <template>
   <HelloWorld />
+  <!-- <router-view/> -->
 </template>
 
 <script>
