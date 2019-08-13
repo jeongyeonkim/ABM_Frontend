@@ -22,8 +22,10 @@
             placeholder="사진을 추가해주세요."
             prepend-icon="mdi-camera"
             label="이미지 첨부"></v-file-input>
-          <v-combobox v-model="chips" chips clearable label="Tag를 입력하세요" multiple solo>
+
+          <v-combobox v-model="chips" chips clearable label="Tag를 입력하세요" multiple solo deletable-chips>
           <v-chip v-bind="attrs" close ></v-chip></v-combobox>
+
           <v-textarea counter label="내용을 입력 해주세요." :rules="textsize" clearable class="my-4"></v-textarea>
           <v-btn block outlined color="#E65100" class="my-4" href="/main">공유하기</v-btn>
           </v-flex>
