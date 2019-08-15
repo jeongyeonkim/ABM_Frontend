@@ -6,8 +6,8 @@
         <v-layout align-center justify-center>
           <v-flex xs12 sm8 md4>
           <Toolbar></Toolbar>
-          <v-flex class="mx-4 my-3">
-          <v-img max-width="500" max-height="300"
+          <v-flex class="mx-4 my-5">
+          <v-img max-width="500" max-height="300" 
             src="https://placeimg.com/500/300/animals"
             aspect-ratio="1" class="grey lighten-2">
               <v-card-text style="height: 270px; width: 450px; position: relative">
