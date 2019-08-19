@@ -26,6 +26,11 @@ export default new Router({
       path: '/writeperson',
       name: 'writeperson',
       component: () => import('./views/WritePerson.vue')
+    },
+    {
+      path: '/feedperson',
+      name: 'feedperson',
+      component: () => import('./views/FeedPerson.vue')
     }
   ]
 })
