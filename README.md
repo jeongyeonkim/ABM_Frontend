@@ -2,7 +2,7 @@
 ###dndkdkdk
 
 ## Project setup
-```
+```'
 npm install
 ```
 

@@ -26,6 +26,11 @@ export default new Router({
       path: '/writeperson',
       name: 'writeperson',
       component: () => import('./views/WritePerson.vue')
+    },
+    {
+      path: '/groupmain',
+      name: 'groupmain',
+      component: () => import('./views/GroupMain.vue')
     }
   ]
 })

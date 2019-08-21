@@ -24,7 +24,6 @@
                         <template v-slot:badge>0</template>
                         <v-icon>notifications</v-icon>
                     </v-badge>
-                <v-toolbar-side-icon></v-toolbar-side-icon>
                 </v-list-item>
             </template>
 
@@ -73,6 +72,4 @@ export default {
     #toolbar{
     background-color : #E65100;
   }
-
 </style>
-
