@@ -24,6 +24,7 @@
             <v-icon>create</v-icon>
             </v-btn>
           </v-tabs>
+          <FeedCard></FeedCard>
           </v-flex>
         </v-layout>
       </v-container>
@@ -35,6 +36,7 @@
 
 <script>
 import Toolbar from '../components/Toolbar.vue';
+import FeedCard from '../components/FeedCard.vue';
 
 export default {
   name: 'default',
@@ -43,7 +45,8 @@ export default {
     }
   },
   components: {
-    Toolbar
+    Toolbar,
+    FeedCard
   },
   methods: {}
 }
