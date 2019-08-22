@@ -19,10 +19,12 @@
                     <v-row class="caption">2019년 08월 01일</v-row>
                 </v-row>
                 <p class="caption my-0">본문 내용</p>
-                <v-btn icon max-height="20" max-width="20" >
-                    <v-icon color="#E65100" @click="dark = !dark" size="15">favorite</v-icon>
-                    32
+                <v-item v-slot:default="{ active, toggle }">
+                <v-btn icon dark @click="toggle">
+                    <v-icon color="#E65100">
+                        {{ active ? 'mdi-heart' : 'mdi-heart-outline' }}</v-icon>
                 </v-btn>
+                </v-item>
                 <v-row class="mx-3 my-2">
                     <v-row class="caption">id : comment</v-row>
                     <v-row class="overline text-end grey--text text-end">2019년 08월 01일</v-row>
@@ -50,7 +52,6 @@ export default {
   name: 'default',
   data () {
     return {
-        dark: false
     }
   },
   components: {
