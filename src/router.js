@@ -31,6 +31,11 @@ export default new Router({
       path: '/feedperson',
       name: 'feedperson',
       component: () => import('./views/FeedPerson.vue')
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('./views/Profile.vue')
     }
   ]
 })

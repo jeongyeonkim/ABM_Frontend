@@ -25,7 +25,7 @@
                 </v-btn>
                 <v-row class="mx-3 my-2">
                     <v-row class="caption">id : comment</v-row>
-                    <v-row class="overline text-end grey--text text-end">2019년 08월 01일</v-row>
+                    <v-row class="overline text-end grey--text">2019년 08월 01일</v-row>
                 </v-row>
                 <v-row>
                     <v-text-field class="caption" height="15" label="댓글쓰기"></v-text-field>
