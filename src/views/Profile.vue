@@ -20,7 +20,7 @@
           <!-- 게시글 -->
           <template>
             <v-row>
-              <v-col >
+              <v-col cols="12" sm="6" offset-sm="3">
                   <v-container fluid>
                     <v-row>
                       <v-col
