@@ -28,15 +28,14 @@ export default new Router({
       component: () => import('./views/WritePerson.vue')
     },
     {
-<<<<<<< HEAD
       path: '/groupmain',
       name: 'groupmain',
       component: () => import('./views/GroupMain.vue')
-=======
+    },
+    {
       path: '/feedperson',
       name: 'feedperson',
       component: () => import('./views/FeedPerson.vue')
->>>>>>> e7a809987d6803aac3e1630b91bd4f3f35c5d4a8
     }
   ]
 })
