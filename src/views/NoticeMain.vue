@@ -6,7 +6,7 @@
         <v-layout align-center justify-center>
           <v-flex xs12 sm8 md4>
           <Toolbar></Toolbar>
-          <NoticeCard></NoticeCard>
+          <NoticeList></NoticeList>
           </v-flex>
         </v-layout>
       </v-container>
@@ -17,7 +17,7 @@
 
 <script>
 import Toolbar from '../components/Toolbar.vue';
-import NoticeCard from '../components/NoticeCard.vue';
+import NoticeList from '../components/NoticeList.vue';
 
 export default {
   name: 'default',
@@ -27,7 +27,7 @@ export default {
   },
   components: {
     Toolbar,
-    NoticeCard
+    NoticeList
   },
   methods: {}
 }
