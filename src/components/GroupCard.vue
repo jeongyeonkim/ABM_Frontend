@@ -5,6 +5,7 @@
         xs12 sm8 md4
         elevaiton="10"
         v-show="show"
+        href = "/feedgroup"
     >
     <v-img
         class = "white--text"
