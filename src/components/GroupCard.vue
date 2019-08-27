@@ -3,7 +3,7 @@
     <v-card
         class = "mx-auto"
         xs12 sm8 md4
-        elevaiton-12
+        elevaiton="10"
         v-show="show"
     >
     <v-img
@@ -26,12 +26,12 @@
 
     <v-card-text>
         <v-icon>person_pin</v-icon>
-        <span>numberofmember</span><br>
+        <span>100</span><br>
         <span class = "text--primary">
-        <span>    Explain about Group</span><br>
+        <span> this group is ~~~ group! welcome! </span><br>
         <v-card-text>
-            <v-chip :ripple="false" class="mr-2">Tag1</v-chip>
-            <v-chip :ripple="false" class="mr-2">Tag2</v-chip>
+            <v-chip :ripple="false" class="mr-2">dog</v-chip>
+            <v-chip :ripple="false" class="mr-2">cat</v-chip>
         </v-card-text>
         </span>
     </v-card-text>
