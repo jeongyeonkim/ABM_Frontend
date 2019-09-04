@@ -52,5 +52,10 @@ export default new Router({
       name: 'noticemain',
       component: () => import('./views/NoticeMain.vue')
     },
+    {
+      path: '/settingsmain',
+      name: 'settingsmain',
+      component: () => import('./views/SettingsMain.vue')
+    },
   ]
 })

@@ -1,11 +1,11 @@
 <template>
+<div>
 <v-flex>
     <v-card
         class = "mx-auto"
         xs12 sm8 md4
         elevaiton="10"
         v-show="show"
-        href = "/feedgroup"
     >
     <v-img
         class = "white--text"
@@ -17,7 +17,7 @@
             <v-btn
                 class = "mx-2" fab dark x-small color="error" @click="show=false">
                     <v-icon dark>
-                    remove
+                    delete
                     </v-icon>
             </v-btn>
         </div>
@@ -38,6 +38,7 @@
     </v-card-text>
     </v-card>
 </v-flex>
+</div>
 </template>
 
 <script>
