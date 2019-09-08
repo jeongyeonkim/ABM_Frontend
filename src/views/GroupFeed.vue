@@ -22,8 +22,8 @@
             </v-row>
           </v-card>
           <v-card class="ma-0 pa-0"  :elevation="10">
-            <v-img height="80" width="350"
-              src="https://placeimg.com/350/80/animals" ></v-img>
+            <v-img height="80" width="438"
+              src="https://placeimg.com/438/80/animals" ></v-img>
           </v-card>
           <FeedCard></FeedCard>
           </v-flex>
