@@ -37,5 +37,25 @@ export default new Router({
       name: 'feedperson',
       component: () => import('./views/FeedPerson.vue')
     },
+    {
+      path: '/feedgroup',
+      name: 'feedgroup',
+      component: () => import('./views/GroupFeed.vue')
+    },
+    {
+      path: '/storemain',
+      name: 'storemain',
+      component: () => import('./views/StoreMain.vue')
+    },
+    {
+      path: '/noticemain',
+      name: 'noticemain',
+      component: () => import('./views/NoticeMain.vue')
+    },
+    {
+      path: '/settingsmain',
+      name: 'settingsmain',
+      component: () => import('./views/SettingsMain.vue')
+    },
   ]
 })

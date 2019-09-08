@@ -20,10 +20,12 @@
                   <v-icon>group_add</v-icon>
                   </v-tab>
           </v-tabs>
-          <GroupCard></GroupCard>
-          <GroupCard></GroupCard>
-          <GroupCard></GroupCard>
 
+          <v-flex>
+          <v-card elevation="5">
+          <v-col>
+          <GroupCard></GroupCard>
+          <GroupCard></GroupCard>
           <v-dialog v-model="dialog" persistent max-width="600px">
             <template v-slot:activator="{ on }">
               <v-btn fab color = "#E65100" v-on="on" dark x-small bottom right absolute>
@@ -39,11 +41,7 @@
                 <v-img max-width="500" max-height="300" 
                   src="https://placeimg.com/500/300/animals"
                   aspect-ratio="1" class="grey lighten-2">
-                  <v-card-text style="height: 270px; width: 450px; position: relative">
-                  <v-btn absolute dark fab bottom right color="#E65100">
-                    <v-icon>add</v-icon>
-                  </v-btn>
-                  </v-card-text>
+                  
                 </v-img>
               <v-file-input
                 :rules="memorysize"
@@ -66,11 +64,14 @@
               <v-chip v-bind="attrs" close ></v-chip></v-combobox>
 
               <v-textarea counter label="내용을 입력 해주세요." :rules="textsize" clearable class="my-4"></v-textarea>
-              <v-btn block outlined color="#E65100" class="my-4" href="/groupmain">Finish</v-btn>
+              <v-btn outlined color="#E65100" class="my-4" href="/groupmain">Finish</v-btn>
               </v-flex>
 
             </v-card>
           </v-dialog>
+          </v-col>
+          </v-card>
+          </v-flex>
           </v-flex>
         </v-layout>
       </v-container>
