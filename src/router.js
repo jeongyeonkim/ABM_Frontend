@@ -31,6 +31,11 @@ export default new Router({
       path: '/groupmain',
       name: 'groupmain',
       component: () => import('./views/GroupMain.vue')
-    }
+    },
+    {
+      path: '/feedperson',
+      name: 'feedperson',
+      component: () => import('./views/FeedPerson.vue')
+    },
   ]
 })

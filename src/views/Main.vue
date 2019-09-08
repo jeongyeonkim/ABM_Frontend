@@ -12,16 +12,19 @@
             <v-tab href="#tab-1">
               인기 게시물
               <v-icon>favorite</v-icon>
+
             </v-tab>
 
             <v-tab href="#tab-2">
               최근 게시물
+              
               <v-icon>history</v-icon>
             </v-tab>
             <v-btn icon href="/writeperson">
             <v-icon>create</v-icon>
             </v-btn>
           </v-tabs>
+          <FeedCard></FeedCard>
           </v-flex>
         </v-layout>
       </v-container>
@@ -33,6 +36,7 @@
 
 <script>
 import Toolbar from '../components/Toolbar.vue';
+import FeedCard from '../components/FeedCard.vue';
 
 export default {
   name: 'default',
@@ -41,7 +45,8 @@ export default {
     }
   },
   components: {
-    Toolbar
+    Toolbar,
+    FeedCard
   },
   methods: {}
 }

@@ -6,7 +6,7 @@
             </v-btn >
             <v-spacer></v-spacer>
             <v-spacer>LOGO</v-spacer>
-            <v-toolbar-side-icon @click.stop="drawer = !drawer"><v-icon color="#FFF3E0">dehaze</v-icon></v-toolbar-side-icon>
+            <v-toolbar-items @click.stop="drawer = !drawer"><v-icon color="#FFF3E0">dehaze</v-icon></v-toolbar-items>
         </v-toolbar>
 
         <v-navigation-drawer v-model="drawer" absolute temporary right>
@@ -17,7 +17,7 @@
                 </v-list-item-avatar>
 
                 <v-list-item-content>
-                    <v-list-item-title>user</v-list-item-title>
+                    <v-list-item-content>user</v-list-item-content>
                     <v-list-item-subtitle>님 반갑습니다!</v-list-item-subtitle>
                 </v-list-item-content>
                     <v-badge overlap left color="#E65100">
@@ -34,14 +34,14 @@
             </v-toolbar>
 
             <v-list dense>
-                <v-list-tile v-for="item in items" :key="item.title" @click="goNav(item.address)">
+                <v-list-item v-for="item in items" :key="item.title" @click="goNav(item.address)">
                 <v-list-item-icon>
                     <v-icon>{{ item.icon }}</v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
                     <v-list-item-title>{{ item.title }}</v-list-item-title>
                 </v-list-item-content>
-                </v-list-tile>
+                </v-list-item>
             </v-list>
         </v-navigation-drawer>
     </div>
