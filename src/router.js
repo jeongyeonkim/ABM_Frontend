@@ -57,5 +57,10 @@ export default new Router({
       name: 'settingsmain',
       component: () => import('./views/SettingsMain.vue')
     },
+    {
+      path: '/accountsetting',
+      name: 'accountsetting',
+      component: () => import('./views/AccountSetting.vue')
+    }
   ]
 })
