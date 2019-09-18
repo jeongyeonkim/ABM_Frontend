@@ -61,6 +61,11 @@ export default new Router({
       path: '/accountsetting',
       name: 'accountsetting',
       component: () => import('./views/AccountSetting.vue')
+    },
+    {
+      path: '/serachresult',
+      name: 'serachresult',
+      component: () => import('./views/SerachResult.vue')
     }
   ]
 })
