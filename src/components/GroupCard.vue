@@ -1,11 +1,10 @@
 <template>
-<div>
 <v-flex>
     <v-card
         class = "mx-auto"
         xs12 sm8 md4
         elevaiton="10"
-        v-show="show"
+        @click="goGroupFeed()"
     >
     <v-img
         class = "white--text"
@@ -13,9 +12,9 @@
         src = "https://placeimg.com/200/150/animals"
     >
     <v-card-actions>
-        <div class = "close">
+        <div>
             <v-btn
-                class = "mx-2" fab dark x-small color="error" @click="show=false">
+                class = "mx-2" fab dark x-small color="error" v-on="{stop:goGroupFeed,}">
                     <v-icon dark>
                     delete
                     </v-icon>
@@ -24,7 +23,16 @@
     </v-card-actions>
     <v-card-title class = "align-end fill-height">Group Name</v-card-title>
     </v-img>
-
+   <v-card-actions>
+        <div>
+            <v-btn
+                class = "mx-2" fab dark x-small color="error" v-on="{stop:goGroupFeed,}">
+                    <v-icon dark>
+                    delete
+                    </v-icon>
+            </v-btn>
+        </div>
+    </v-card-actions>
     <v-card-text>
         <v-icon>person_pin</v-icon>
         <span>100</span><br>
@@ -38,14 +46,18 @@
     </v-card-text>
     </v-card>
 </v-flex>
-</div>
 </template>
-
 <script>
 export default {
     data: () => {
         return {
             show: true
+        }
+    },
+
+    methods: { 
+        goGroupFeed(){
+            this.$router.push({name: 'feedgroup'})
         }
     }
 }
