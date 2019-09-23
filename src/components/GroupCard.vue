@@ -1,6 +1,7 @@
 <template>
+<v-div v-if="show">
 <v-flex>
-    <v-card
+        <v-card
         class = "mx-auto"
         xs12 sm8 md4
         elevaiton="10"
@@ -14,7 +15,7 @@
     <v-card-actions>
         <div>
             <v-btn
-                class = "mx-2" fab dark x-small color="error" v-on="{stop:goGroupFeed,}">
+                class = "mx-2" fab dark x-small color="error" v-on:click="show=false">
                     <v-icon dark>
                     delete
                     </v-icon>
@@ -23,16 +24,6 @@
     </v-card-actions>
     <v-card-title class = "align-end fill-height">Group Name</v-card-title>
     </v-img>
-   <v-card-actions>
-        <div>
-            <v-btn
-                class = "mx-2" fab dark x-small color="error" v-on="{stop:goGroupFeed,}">
-                    <v-icon dark>
-                    delete
-                    </v-icon>
-            </v-btn>
-        </div>
-    </v-card-actions>
     <v-card-text>
         <v-icon>person_pin</v-icon>
         <span>100</span><br>
@@ -46,7 +37,9 @@
     </v-card-text>
     </v-card>
 </v-flex>
+</v-div>
 </template>
+
 <script>
 export default {
     data: () => {
