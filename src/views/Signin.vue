@@ -30,7 +30,7 @@
   },
   methods: {
     signin(){
-      this.$http.post('http://localhost:4000/APi/LoginApi', { email:this.id, password:this.password}
+      this.$http.post('http://localhost:4500/APi/LoginApi', { email:this.id, password:this.password }
             ).then(response => {
                 if(response.data == 'Email and password does not match'){
                 alert("입력한 아이디 또는 비밀번호가 올바르지 않습니다.")
@@ -47,6 +47,9 @@
                   this.$router.push('/main')
             }
               }
+            }).catch(e => {
+              // eslint-disable-next-line
+               console.log('error : ', e) 
             })
     }
   }
