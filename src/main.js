@@ -4,15 +4,17 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
 import axios from 'axios'
-import VueAxois from 'vue-axios'
+import VueSession from 'vue-session'
 
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import VueRouter from 'vue-router';
 
+Vue.prototype.$http = Vue.prototype.axios = axios
+
 Vue.use(vuetify)
 Vue.use(VueRouter)
-Vue.use(axios, VueAxois)
+Vue.use(VueSession)
 Vue.config.productionTip = false
 
 new Vue({
