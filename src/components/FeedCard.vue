@@ -4,7 +4,7 @@
         <v-card class="mx-3"  :elevation="10">
             <v-row class="pl-3">
             <v-col class="shrink">
-                <v-img height="100" width="100"
+                <v-img class="image" height="100" width="100"
                 src="https://placeimg.com/300/300/animals" ></v-img>
             </v-col>
             <v-col>
@@ -33,4 +33,12 @@
     </v-layout>
 </div>
 </template>
-          
+
+
+<script>
+export default {
+    data() {
+        
+    },
+}
+</script>

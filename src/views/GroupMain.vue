@@ -22,11 +22,11 @@
           </v-tabs>
 
           <v-flex>
-          <v-card elevation="5">
+          <v-card elevation="3">
           <v-col>
           <GroupCard></GroupCard>
           <GroupCard></GroupCard>
-          <v-dialog v-model="dialog" persistent max-width="600px">
+          <v-dialog v-model="dialog" persistent max-width="450px">
             <template v-slot:activator="{ on }">
               <v-btn fab color = "#E65100" v-on="on" dark x-small bottom right absolute>
                 <v-icon>add</v-icon>
@@ -37,34 +37,42 @@
                 <v-icon>pets</v-icon>
                 <v-toolbar-title>Make your group!</v-toolbar-title>
               </v-toolbar>
-              <v-flex class="mx-4 my-5">
-                <v-img max-width="500" max-height="300" 
-                  src="https://placeimg.com/500/300/animals"
+              <v-flex class="ma-5">
+                <v-img max-width="400" max-height="300" 
+                  src="https://placeimg.com/400/300/animals"
                   aspect-ratio="1" class="grey lighten-2">
                   
                 </v-img>
               <v-file-input
                 :rules="memorysize"
-                class="mx-3"
+                class="pa-5"
                 accept="image/png, image/jpeg, image/bmp"
                 placeholder="사진을 추가해주세요."
                 prepend-icon="mdi-camera"
                 label="이미지 첨부"></v-file-input>
 
-              <v-flex row>
-              <v-text-field v-model="groupname" class="mx-20" label="Group Name" clearable name="Input GroupName"></v-text-field>
-              <v-btn>중복확인</v-btn> </v-flex>
-
+              <v-flex row class="ma-3">
+              <v-text-field v-model="groupname" label="Group Name" clearable name="Input GroupName"></v-text-field>
+              <v-btn>중복확인</v-btn>
               <v-radio-group v-model="row" row>
                 <v-radio label="Public" value="radio-1"></v-radio>
                 <v-radio label="Private" value="radio-2"></v-radio>
               </v-radio-group>
-
               <v-combobox v-model="chips" chips clearable label="Tag를 입력하세요" multiple solo deletable-chips>
               <v-chip v-bind="attrs" close ></v-chip></v-combobox>
-
-              <v-textarea counter label="내용을 입력 해주세요." :rules="textsize" clearable class="my-4"></v-textarea>
-              <v-btn outlined color="#E65100" class="my-4" href="/groupmain">Finish</v-btn>
+              <v-textarea counter label="내용을 입력 해주세요." :rules="textsize" clearable></v-textarea>
+              <v-autocomplete
+                v-model = "selected"
+                :items = "['Myounghak','Sangjin','Jungyeon','Yujin']"
+                chips
+                label="Invite your friend"
+                hide-details
+                hide-no-data
+                hide-selected
+                multiple
+                single-line></v-autocomplete>
+              <v-btn outlined block color="#E65100" class="pa-3" href="/groupmain">Finish</v-btn>
+              </v-flex>
               </v-flex>
 
             </v-card>
@@ -87,6 +95,8 @@ import GroupCard from '../components/GroupCard.vue';
   export default {
     data: () => {
       return {
+        selected:[''],
+        items:['Myounghak','Sangjin','Jungyeon','Yujin'],
         dialog: false,
         switch1: true,
       }
